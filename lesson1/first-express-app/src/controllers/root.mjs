@@ -1,5 +1,6 @@
+// root
 const getRootHandler = (req, res) => {
-  res.end('Response from Express root handler')
+  res.end('Get root route')
 }
 
 export { getRootHandler }

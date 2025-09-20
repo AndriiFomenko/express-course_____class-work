@@ -3,18 +3,20 @@ import {
   getArticlesHandler,
   postArticlesHandler,
   getArticleByIdHandler,
+  deleteArticleByIdHandler,
   putArticleByIdHandler,
-  deleteArticleByIdHandler
+  patchArticleByIdHandler
 } from '../controllers/articles.mjs'
 
-const articlesRouter = Router()
+const router = Router()
 
-articlesRouter.route('/').get(getArticlesHandler).post(postArticlesHandler)
+router.route('/').get(getArticlesHandler).post(postArticlesHandler)
 
-articlesRouter
+router
   .route('/:id')
   .get(getArticleByIdHandler)
-  .put(putArticleByIdHandler)
   .delete(deleteArticleByIdHandler)
+  .put(putArticleByIdHandler)
+  .patch(patchArticleByIdHandler)
 
-export default articlesRouter
+export default router
