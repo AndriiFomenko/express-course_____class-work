@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
     { name: 'Elderberry', price: 4.99 },
     { name: 'Fig', price: 5.99 }
   ]
-  const user = { name: 'John', age: 30 }
+  const user = { name: 'John Smith', age: 21 }
   const title = 'Fruits'
 
   res.render('index', { items, user, title })
