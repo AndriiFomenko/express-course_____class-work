@@ -16,6 +16,20 @@
   <hr>
 
   <a href="http://localhost:3000/protected">Go to protected</a>
+
+  <script>
+    // Получение куки token
+    const token = document.cookie
+      .split('; ')
+      .find(row => row.startsWith('token='))
+      ?.split('=')[1]
+
+    if (token) {
+      console.log('Token:', token)
+    } else {
+      console.log('Кука token не найдена. Пожалуйста, выполните вход.')
+    }
+  </script>
 </form>
 
 </body>

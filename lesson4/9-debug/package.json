@@ -12,9 +12,9 @@
     "nodemon": "^3.0.2"
   },
   "scripts": {
-    "start": "nodemon app.mjs",
-    "start:debug": "cross-env DEBUG=express:* nodemon app.mjs",
-    "start:router": "cross-env DEBUG=express:router nodemon app.mjs",
-    "start:app": "cross-env DEBUG=app:main node app.mjs"
+    "dev": "nodemon app.mjs",
+    "dev:debug": "cross-env DEBUG=express:* nodemon app.mjs",
+    "dev:router": "cross-env DEBUG=express:router nodemon app.mjs",
+    "dev:app": "cross-env DEBUG=app:main,express:* node app.mjs"
   }
 }

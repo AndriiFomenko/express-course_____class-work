@@ -10,7 +10,7 @@ app.get('/', (req, res, next) => {
     unhandledPromise.catch((err) => {
       console.log('Обіцянка тепер оброблена: ', err.message)
     })
-  }, 10000)
+  }, 5000)
 
   res.send('Hello World')
 })

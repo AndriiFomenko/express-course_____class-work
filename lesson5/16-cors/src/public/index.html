@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -8,44 +9,45 @@
 
 <body>
 
-<h1>Тестування CORS</h1>
+  <h1>Тестування CORS</h1>
 
-<button id="getButton">Зробити GET запит</button>
-<button id="postButton">Зробити POST запит</button>
-<button id="putButton">Зробити PUT запит</button>
-<button id="deleteButton">Зробити DELETE запит</button>
+  <button id="getButton">Зробити GET запит</button>
+  <button id="postButton">Зробити POST запит</button>
+  <button id="putButton">Зробити PUT запит</button>
+  <button id="deleteButton">Зробити DELETE запит</button>
 
-<p id="result"></p>
+  <p id="result"></p>
 
-<script>
-  document.getElementById('getButton').addEventListener('click', () => {
-    makeRequest('GET')
-  })
+  <script>
+    document.getElementById('getButton').addEventListener('click', () => {
+      makeRequest('GET')
+    })
 
-  document.getElementById('postButton').addEventListener('click', () => {
-    makeRequest('POST')
-  })
+    document.getElementById('postButton').addEventListener('click', () => {
+      makeRequest('POST')
+    })
 
-  document.getElementById('putButton').addEventListener('click', () => {
-    makeRequest('PUT')
-  })
+    document.getElementById('putButton').addEventListener('click', () => {
+      makeRequest('PUT')
+    })
 
-  document.getElementById('deleteButton').addEventListener('click', () => {
-    makeRequest('DELETE')
-  })
+    document.getElementById('deleteButton').addEventListener('click', () => {
+      makeRequest('DELETE')
+    })
 
-  function makeRequest(method) {
-    fetch('http://localhost:3000/api', { method: method })
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('result').textContent = `Відповідь: ${data}`
-      })
-      .catch(error => {
-        console.error('Помилка:', error)
-        document.getElementById('result').textContent = 'Помилка CORS або сервера!'
-      })
-  }
-</script>
+    function makeRequest(method) {
+      fetch('http://localhost:3000/api', { method: method })
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('result').textContent = `Відповідь: ${data}`
+        })
+        .catch(error => {
+          console.error('Помилка:', error)
+          document.getElementById('result').textContent = 'Помилка CORS або сервера!'
+        })
+    }
+  </script>
 
 </body>
+
 </html>

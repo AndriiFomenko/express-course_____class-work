@@ -23,9 +23,9 @@ passport.use(
     console.log('password:', password)
     if (username === fakeUser.username && password === fakeUser.password) {
       return done(null, fakeUser)
-    } else {
-      return done(null, false, { message: 'Невірні дані' })
     }
+
+    return done(null, false, { message: 'Невірні дані для авторизації' })
   })
 )
 

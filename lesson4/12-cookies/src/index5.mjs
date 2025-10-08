@@ -8,8 +8,8 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 app.get('/', (req, res) => {
-  const expiresTime = new Date(Date.now() + 10000)
-  res.cookie('date', new Date().toISOString(), { httpOnly: true, expires: expiresTime })
+  const expiresTime = new Date(Date.now() + 100000)
+  res.cookie('date', new Date().toISOString(), { httpOnly: false, expires: expiresTime })
   res.sendFile(path.join(__dirname, 'public', 'index.html'))
 })
 
