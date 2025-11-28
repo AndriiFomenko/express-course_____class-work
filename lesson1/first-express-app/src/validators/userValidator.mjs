@@ -3,8 +3,8 @@ import { celebrate, Segments } from 'celebrate'
 
 const userSchema = Joi.object({
   name: Joi.string().required().min(3).max(30),
-  email: Joi.string().required().email(),
-  age: Joi.number().required().min(0).max(100)
+  email: Joi.string().email().required(),
+  age: Joi.number().required().min(0).max(120)
 })
 
 const validateUserPost = celebrate({
@@ -15,10 +15,21 @@ const validateUserPut = celebrate({
   [Segments.BODY]: userSchema
 })
 
-const validateUserIdParam = celebrate({
+const validateUserPatch = celebrate({
+  [Segments.BODY]: userSchema.fork(['name', 'email', 'age'], (schema) =>
+    schema.optional()
+  )
+})
+
+const validateUserIdParams = celebrate({
   [Segments.PARAMS]: Joi.object({
     id: Joi.string().required().min(5).max(30)
   })
 })
 
-export { validateUserPost, validateUserPut, validateUserIdParam }
+export {
+  validateUserPost,
+  validateUserPut,
+  validateUserPatch,
+  validateUserIdParams
+}

@@ -3,14 +3,15 @@ import {
   getUsersHandler,
   postUsersHandler,
   getUserByIdHandler,
-  deleteUserByIdHandler,
   putUserByIdHandler,
-  patchUserByIdHandler
+  patchUserByIdHandler,
+  deleteUserByIdHandler
 } from '../controllers/users.mjs'
 import {
   validateUserPost,
   validateUserPut,
-  validateUserIdParam
+  validateUserPatch,
+  validateUserIdParams
 } from '../validators/userValidator.mjs'
 
 const router = Router()
@@ -19,9 +20,9 @@ router.route('/').get(getUsersHandler).post(validateUserPost, postUsersHandler)
 
 router
   .route('/:id')
-  .get(validateUserIdParam, getUserByIdHandler)
-  .delete(validateUserIdParam, deleteUserByIdHandler)
-  .put(validateUserIdParam, validateUserPut, putUserByIdHandler)
-  .patch(validateUserIdParam, patchUserByIdHandler)
+  .get(validateUserIdParams, getUserByIdHandler)
+  .put(validateUserIdParams, validateUserPut, putUserByIdHandler)
+  .patch(validateUserIdParams, validateUserPatch, patchUserByIdHandler)
+  .delete(validateUserIdParams, deleteUserByIdHandler)
 
 export default router

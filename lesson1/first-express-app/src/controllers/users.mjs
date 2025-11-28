@@ -1,38 +1,53 @@
+import { randomUUID } from 'crypto'
+
 // users
 const getUsersHandler = (req, res) => {
-  res.end('Get users route')
+  res.end('GET users route')
 }
 
 const postUsersHandler = (req, res) => {
-  res.end('Post users route')
+  const newUser = {
+    id: randomUUID(),
+    ...req.body
+  }
+  console.log(newUser)
+  res.status(201).json(newUser)
 }
 
 // users/:id
 const getUserByIdHandler = (req, res) => {
   const { id } = req.params
-  res.end(`Get user by id route: ${id}`)
-}
-
-const deleteUserByIdHandler = (req, res) => {
-  const { id } = req.params
-  res.end(`Delete user by id route: ${id}`)
+  res.end(`GET user by id route ${id}`)
 }
 
 const putUserByIdHandler = (req, res) => {
   const { id } = req.params
-  res.end(`Put user by id route: ${id}`)
+  const updatedUser = {
+    id,
+    ...req.body
+  }
+  res.json(updatedUser)
 }
 
 const patchUserByIdHandler = (req, res) => {
   const { id } = req.params
-  res.end(`Patch user by id route: ${id}`)
+  const updatedUser = {
+    id,
+    ...req.body
+  }
+  res.json(updatedUser)
+}
+
+const deleteUserByIdHandler = (req, res) => {
+  const { id } = req.params
+  res.end(`DELETE user by id route ${id}`)
 }
 
 export {
   getUsersHandler,
   postUsersHandler,
   getUserByIdHandler,
-  deleteUserByIdHandler,
   putUserByIdHandler,
-  patchUserByIdHandler
+  patchUserByIdHandler,
+  deleteUserByIdHandler
 }
