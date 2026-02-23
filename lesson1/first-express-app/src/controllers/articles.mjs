@@ -1,38 +1,27 @@
-// articles
-const getArticlesHandler = (req, res) => {
-  res.end('GET articles route')
+export const getArticlesHandler = (req, res) => {
+  res.end('GET Response from the articles')
 }
 
-const postArticlesHandler = (req, res) => {
-  res.end('POST articles route')
+export const postArticlesHandler = (req, res) => {
+  res.end('POST Response from the articles')
 }
 
-// articles/:id
-const getArticleByIdHandler = (req, res) => {
-  const { id } = req.params
-  res.end(`GET article by id route ${id}`)
+export const getArticleByIdHandler = (req, res) => {
+  console.log(req.params.id)
+  res.end('GET Response from the article by id')
 }
 
-const putArticleByIdHandler = (req, res) => {
-  const { id } = req.params
-  res.end(`PUT article by id route ${id}`)
+export const putArticleByIdHandler = (req, res) => {
+  console.log(req.params.id)
+  res.end('PUT Response from the article by id')
 }
 
-const patchArticleByIdHandler = (req, res) => {
-  const { id } = req.params
-  res.end(`PATCH article by id route ${id}`)
+export const patchArticleByIdHandler = (req, res) => {
+  console.log(req.params.id)
+  res.end('PATCH Response from the article by id')
 }
 
-const deleteArticleByIdHandler = (req, res) => {
-  const { id } = req.params
-  res.end(`DELETE article by id route ${id}`)
-}
-
-export {
-  getArticlesHandler,
-  postArticlesHandler,
-  getArticleByIdHandler,
-  putArticleByIdHandler,
-  patchArticleByIdHandler,
-  deleteArticleByIdHandler
+export const deleteArticleByIdHandler = (req, res) => {
+  console.log(req.params.id)
+  res.end('DELETE Response from the article by id')
 }

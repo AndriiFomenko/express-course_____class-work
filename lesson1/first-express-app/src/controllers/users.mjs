@@ -1,53 +1,27 @@
-import { randomUUID } from 'crypto'
-
-// users
-const getUsersHandler = (req, res) => {
-  res.end('GET users route')
+export const getUsersHandler = (req, res) => {
+  res.end('GET Response from the users')
 }
 
-const postUsersHandler = (req, res) => {
-  const newUser = {
-    id: randomUUID(),
-    ...req.body
-  }
-  console.log(newUser)
-  res.status(201).json(newUser)
+export const postUsersHandler = (req, res) => {
+  res.end('POST Response from the users')
 }
 
-// users/:id
-const getUserByIdHandler = (req, res) => {
-  const { id } = req.params
-  res.end(`GET user by id route ${id}`)
+export const getUserByIdHandler = (req, res) => {
+  console.log(req.params.id)
+  res.end('GET Response from the user by id')
 }
 
-const putUserByIdHandler = (req, res) => {
-  const { id } = req.params
-  const updatedUser = {
-    id,
-    ...req.body
-  }
-  res.json(updatedUser)
+export const putUserByIdHandler = (req, res) => {
+  console.log(req.params.id)
+  res.end('PUT Response from the user by id')
 }
 
-const patchUserByIdHandler = (req, res) => {
-  const { id } = req.params
-  const updatedUser = {
-    id,
-    ...req.body
-  }
-  res.json(updatedUser)
+export const patchUserByIdHandler = (req, res) => {
+  console.log(req.params.id)
+  res.end('PATCH Response from the user by id')
 }
 
-const deleteUserByIdHandler = (req, res) => {
-  const { id } = req.params
-  res.end(`DELETE user by id route ${id}`)
-}
-
-export {
-  getUsersHandler,
-  postUsersHandler,
-  getUserByIdHandler,
-  putUserByIdHandler,
-  patchUserByIdHandler,
-  deleteUserByIdHandler
+export const deleteUserByIdHandler = (req, res) => {
+  console.log(req.params.id)
+  res.end('DELETE Response from the user by id')
 }
