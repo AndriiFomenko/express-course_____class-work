@@ -1,9 +1,12 @@
 import { Router } from 'express'
-import { mainController } from '../controllers/mainController.mjs'
+import infoRouter from './info.mjs'
+import usersRouter from './users.mjs'
+import articlesRouter from './articles.mjs'
 
 const router = Router()
 
-router.get('/', mainController)
-router.post('/', mainController)
+router.use('/users', usersRouter)
+router.use('/articles', articlesRouter)
+router.use('/', infoRouter)
 
 export default router

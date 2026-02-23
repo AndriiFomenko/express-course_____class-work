@@ -1,17 +1,21 @@
 {
-  "name": "express-middlware-app",
+  "name": "first-express-app",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.mjs",
   "license": "MIT",
   "scripts": {
+    "start": "node src/app.mjs",
     "dev": "nodemon src/app.mjs"
   },
   "dependencies": {
-    "chalk": "^5.4.1",
+    "celebrate": "^15.0.3",
     "express": "^5.1.0",
-    "morgan": "^1.10.1"
+    "joi": "^18.0.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
+  },
+  "resolutions": {
+    "joi": "^18.0.1"
   }
 }
