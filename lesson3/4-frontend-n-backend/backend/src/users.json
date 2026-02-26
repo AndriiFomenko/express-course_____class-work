@@ -1,0 +1,93 @@
+[
+  {
+    "id": "090e3deb-95ba-45a0-81ff-22696a52f12d",
+    "name": "Олександр",
+    "age": 25,
+    "gender": "male",
+    "city": "Київ"
+  },
+  {
+    "id": "98760c5b-d2da-4b33-9cb0-38891ca5b8c5",
+    "name": "Марія",
+    "age": 22,
+    "gender": "female",
+    "city": "Львів"
+  },
+  {
+    "id": "09f9ff06-987d-42fa-b0a5-7c72fb504758",
+    "name": "Дмитро",
+    "age": 30,
+    "gender": "male",
+    "city": "Одеса"
+  },
+  {
+    "id": "08f87662-561f-4b7a-9b5f-dd23154db6bb",
+    "name": "Анна",
+    "age": 27,
+    "gender": "female",
+    "city": "Харків"
+  },
+  {
+    "id": "a6be518f-6f5b-465a-9a19-f0cd95a68287",
+    "name": "Андрій",
+    "age": 24,
+    "gender": "male",
+    "city": "Дніпро"
+  },
+  {
+    "id": "e118f511-d758-422c-8196-e0b20dfc7aae",
+    "name": "Олена",
+    "age": 29,
+    "gender": "female",
+    "city": "Вінниця"
+  },
+  {
+    "id": "763dc0d2-e10c-45ce-bab0-be115ad494fe",
+    "name": "Сергій",
+    "age": 33,
+    "gender": "male",
+    "city": "Запоріжжя"
+  },
+  {
+    "id": "cb1d83c8-3d97-487f-ba5a-cd2fd0ee9261",
+    "name": "Тетяна",
+    "age": 21,
+    "gender": "female",
+    "city": "Чернігів"
+  },
+  {
+    "id": "744c9adc-83b0-4e2e-98b4-d8bb23ef94c0",
+    "name": "Ігор",
+    "age": 26,
+    "gender": "male",
+    "city": "Полтава"
+  },
+  {
+    "id": "8fbc91ac-c0b1-4962-9133-a18ef7c9f7a9",
+    "name": "Юлія",
+    "age": 28,
+    "gender": "female",
+    "city": "Черкаси"
+  },
+  {
+    "id": "719fa3c6-2c86-4211-88e4-5e6e1d648d29",
+    "name": "Олеся",
+    "age": 22,
+    "gender": "female",
+    "city": "Львів"
+  },
+  {
+    "id": "49d16df6-24b7-4a28-bebd-ff7d5de7533f",
+    "name": "Маруся",
+    "age": 24,
+    "gender": "female",
+    "city": "Львів"
+  },
+  {
+    "name": "Петя",
+    "age": 22,
+    "gender": "male",
+    "city": "Львів",
+    "id": "0d7ff46d-24ff-4346-b525-f1921623e2e7"
+  }
+]
