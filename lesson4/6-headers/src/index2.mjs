@@ -15,7 +15,6 @@ app.get('/json', (req, res) => {
 })
 
 app.get('/text', (req, res) => {
-  // const personJson = JSON.stringify(person)
   // res.setHeader('Content-Type', 'text/html; charset=utf-8')
   // res.end(personJson)
   res.send(personJson) // ! теж саме що і дві строки вище

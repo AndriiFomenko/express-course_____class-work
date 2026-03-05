@@ -26,4 +26,13 @@ setTimeout(() => {
   } catch (err) {
     log(`${err.name}: ${err.message}`, 'bgRedBright')
   }
+}, 2500)
+
+setTimeout(() => {
+  try {
+    const decodedPayload = jwt.verify(token, secretKey)
+    logColored('Decoded payload:', 'blue', decodedPayload)
+  } catch (err) {
+    log(`${err.name}: ${err.message}`, 'bgRedBright')
+  }
 }, 5000)

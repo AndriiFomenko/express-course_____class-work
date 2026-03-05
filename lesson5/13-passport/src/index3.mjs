@@ -90,15 +90,15 @@ app.get('/protected', (req, res) => {
 })
 
 // ^ Варіант видалення сесії
-// app.get('/logout', (req, res) => {
-//   req.session.destroy((err) => {
-//     if (err) {
-//       console.error('Помилка при знищенні сесії:', err)
-//     } else {
-//       res.redirect('/')
-//     }
-//   })
-// })
+app.get('/logout', (req, res) => {
+  req.session.destroy((err) => {
+    if (err) {
+      console.error('Помилка при знищенні сесії:', err)
+    } else {
+      res.redirect('/')
+    }
+  })
+})
 
 app.listen(3000, () => {
   console.log('The server has started on port 3000')

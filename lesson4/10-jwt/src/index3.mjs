@@ -15,8 +15,7 @@ const decodedPayload = jwt.verify(token, secretKey)
 logColored('Decoded payload:', 'blue', decodedPayload)
 
 try {
-  const fakeToken =
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSm9obiIsImFnZSI6MjUsImlhdCI6MTc1OTM0MTI0MX0.GjQ24chzYvZEXQzXwCOPcnz2kPnzAFh6HGHzzkVgR4U123'
+  const fakeToken = token + '123'
   const payload = jwt.verify(fakeToken, secretKey)
   logColored('Decoded payload 2:', 'bgRed', payload)
 } catch (err) {
