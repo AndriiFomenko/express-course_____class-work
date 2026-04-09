@@ -1,3 +1,3 @@
 export const getRootHandler = (req, res) => {
-  res.end('GET Response from the server')
+  res.end('GET / Response')
 }

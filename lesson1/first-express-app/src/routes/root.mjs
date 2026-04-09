@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { getRootHandler } from '../controllers/info.mjs'
+import { getRootHandler } from '../controllers/root.mjs'
 
 const router = Router()
 

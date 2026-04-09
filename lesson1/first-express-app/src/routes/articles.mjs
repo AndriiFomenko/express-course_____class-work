@@ -5,7 +5,7 @@ import {
   getArticleByIdHandler,
   putArticleByIdHandler,
   patchArticleByIdHandler,
-  deleteArticleByIdHandler
+  deleteArticleByIdHandler,
 } from '../controllers/articles.mjs'
 
 const router = Router()
@@ -13,7 +13,7 @@ const router = Router()
 router.route('/').get(getArticlesHandler).post(postArticlesHandler)
 
 router
-  .route('/:id')
+  .route('/:articleId')
   .get(getArticleByIdHandler)
   .put(putArticleByIdHandler)
   .patch(patchArticleByIdHandler)

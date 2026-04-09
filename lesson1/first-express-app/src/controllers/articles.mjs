@@ -1,27 +1,27 @@
 export const getArticlesHandler = (req, res) => {
-  res.end('GET Response from the articles')
+  res.end('GET /articles Response')
 }
 
 export const postArticlesHandler = (req, res) => {
-  res.end('POST Response from the articles')
+  res.end('POST /articles Response')
 }
 
 export const getArticleByIdHandler = (req, res) => {
-  console.log(req.params.id)
-  res.end('GET Response from the article by id')
+  const { articleId } = req.params
+  res.end(`GET /articles/${articleId} Response`)
 }
 
 export const putArticleByIdHandler = (req, res) => {
-  console.log(req.params.id)
-  res.end('PUT Response from the article by id')
+  const { articleId } = req.params
+  res.end(`PUT /articles/${articleId} Response`)
 }
 
 export const patchArticleByIdHandler = (req, res) => {
-  console.log(req.params.id)
-  res.end('PATCH Response from the article by id')
+  const { articleId } = req.params
+  res.end(`PATCH /articles/${articleId} Response`)
 }
 
 export const deleteArticleByIdHandler = (req, res) => {
-  console.log(req.params.id)
-  res.end('DELETE Response from the article by id')
+  const { articleId } = req.params
+  res.end(`DELETE /articles/${articleId} Response`)
 }

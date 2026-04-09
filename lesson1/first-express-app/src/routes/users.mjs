@@ -7,16 +7,22 @@ import {
   patchUserByIdHandler,
   deleteUserByIdHandler
 } from '../controllers/users.mjs'
+import {
+  validateUserPost,
+  validateUserPut,
+  validateUserPatch,
+  validateUserIdParams
+} from '../validators/userValidation.mjs'
 
 const router = Router()
 
-router.route('/').get(getUsersHandler).post(postUsersHandler)
+router.route('/').get(getUsersHandler).post(validateUserPost, postUsersHandler)
 
 router
-  .route('/:id')
-  .get(getUserByIdHandler)
-  .put(putUserByIdHandler)
-  .patch(patchUserByIdHandler)
-  .delete(deleteUserByIdHandler)
+  .route('/:userId')
+  .get(validateUserIdParams, getUserByIdHandler)
+  .put(validateUserIdParams, validateUserPut, putUserByIdHandler)
+  .patch(validateUserIdParams, validateUserPatch, patchUserByIdHandler)
+  .delete(validateUserIdParams, deleteUserByIdHandler)
 
 export default router
