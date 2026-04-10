@@ -89,5 +89,19 @@
     "gender": "male",
     "city": "Львів",
     "id": "0d7ff46d-24ff-4346-b525-f1921623e2e7"
+  },
+  {
+    "name": "Єлізавета",
+    "age": 22,
+    "gender": "female",
+    "city": "Львів",
+    "id": "1e21f576-9da9-4cb5-a8e6-ecad436d1bf2"
+  },
+  {
+    "name": "Андрій",
+    "age": 22,
+    "gender": "male",
+    "city": "Львів",
+    "id": "3b229fd3-99b6-4ef7-b604-e7cf12547874"
   }
 ]
