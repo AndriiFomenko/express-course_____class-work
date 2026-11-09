@@ -1,4 +1,4 @@
-import { Router } from 'express'
+import express from 'express'
 import {
   getUsersHandler,
   postUsersHandler,
@@ -7,22 +7,16 @@ import {
   patchUserByIdHandler,
   deleteUserByIdHandler
 } from '../controllers/users.mjs'
-import {
-  validateUserPost,
-  validateUserPut,
-  validateUserPatch,
-  validateUserIdParams
-} from '../validators/userValidation.mjs'
 
-const router = Router()
+const userRouter = express.Router()
 
-router.route('/').get(getUsersHandler).post(validateUserPost, postUsersHandler)
+userRouter.route('/').get(getUsersHandler).post(postUsersHandler)
 
-router
+userRouter
   .route('/:userId')
-  .get(validateUserIdParams, getUserByIdHandler)
-  .put(validateUserIdParams, validateUserPut, putUserByIdHandler)
-  .patch(validateUserIdParams, validateUserPatch, patchUserByIdHandler)
-  .delete(validateUserIdParams, deleteUserByIdHandler)
+  .get(getUserByIdHandler)
+  .put(putUserByIdHandler)
+  .patch(patchUserByIdHandler)
+  .delete(deleteUserByIdHandler)
 
-export default router
+export default userRouter

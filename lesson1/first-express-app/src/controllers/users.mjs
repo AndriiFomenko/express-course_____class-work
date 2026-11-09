@@ -1,32 +1,25 @@
+// users
 export const getUsersHandler = (req, res) => {
-  res.end('GET /users Response')
+  res.send('Response from USERS route')
 }
-
 export const postUsersHandler = (req, res) => {
-  const { name, email, age } = req.body
-
-  res.json({
-    message: 'POST /users Response',
-    data: { name, email, age }
-  })
+  res.send('Response from USERS POST route')
 }
 
+// user by id
 export const getUserByIdHandler = (req, res) => {
   const { userId } = req.params
-  res.end(`GET /users/${userId} Response`)
+  res.send(`Response from USER with ID: ${userId}`)
 }
-
 export const putUserByIdHandler = (req, res) => {
   const { userId } = req.params
-  res.end(`PUT /users/${userId} Response`)
+  res.send(`Response from USER PUT with ID: ${userId}`)
 }
-
 export const patchUserByIdHandler = (req, res) => {
   const { userId } = req.params
-  res.end(`PATCH /users/${userId} Response`)
+  res.send(`Response from USER PATCH with ID: ${userId}`)
 }
-
 export const deleteUserByIdHandler = (req, res) => {
   const { userId } = req.params
-  res.end(`DELETE /users/${userId} Response`)
+  res.send(`Response from USER DELETE with ID: ${userId}`)
 }

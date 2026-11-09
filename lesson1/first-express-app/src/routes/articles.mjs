@@ -1,22 +1,23 @@
-import { Router } from 'express'
+import express from 'express'
 import {
   getArticlesHandler,
   postArticlesHandler,
   getArticleByIdHandler,
   putArticleByIdHandler,
   patchArticleByIdHandler,
-  deleteArticleByIdHandler,
+  deleteArticleByIdHandler
 } from '../controllers/articles.mjs'
 
-const router = Router()
+const articleRouter = express.Router()
 
-router.route('/').get(getArticlesHandler).post(postArticlesHandler)
+articleRouter.route('/').get(getArticlesHandler).post(postArticlesHandler)
 
-router
+articleRouter
   .route('/:articleId')
   .get(getArticleByIdHandler)
   .put(putArticleByIdHandler)
   .patch(patchArticleByIdHandler)
   .delete(deleteArticleByIdHandler)
 
-export default router
+export default articleRouter
+
